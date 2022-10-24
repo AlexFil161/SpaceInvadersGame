@@ -125,7 +125,6 @@ public class SpaceInvadersGame extends Game {
         }
     }
 
-
     private void createStars() {
         stars = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
