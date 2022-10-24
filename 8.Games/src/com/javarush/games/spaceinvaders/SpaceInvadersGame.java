@@ -166,7 +166,7 @@ public class SpaceInvadersGame extends Game {
 
     private void check() {
         playerShip.verifyHit(enemyBullets);
-        enemyFleet.verifyHit(playerBullets);
+        score += enemyFleet.verifyHit(playerBullets);
         enemyFleet.deleteHiddenShips();
         removeDeadBullets();
 
@@ -182,8 +182,6 @@ public class SpaceInvadersGame extends Game {
             playerShip.win();
             stopGameWithDelay();
         }
-
-        score += enemyFleet.verifyHit(enemyBullets);
     }
 
     private void stopGame(boolean isWin) {
